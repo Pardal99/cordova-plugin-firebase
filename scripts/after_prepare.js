@@ -17,31 +17,7 @@ var name = utilities.getValue(config, 'name');
 var IOS_DIR = 'platforms/ios';
 var ANDROID_DIR = 'platforms/android';
 
-var PLATFORM = {
-  IOS: {
-    dest: [
-      IOS_DIR + '/' + name + '/Resources/GoogleService-Info.plist',
-      IOS_DIR + '/' + name + '/Resources/Resources/GoogleService-Info.plist'
-    ],
-    src: [
-      'GoogleService-Info.plist',
-      IOS_DIR + '/www/GoogleService-Info.plist',
-      'www/GoogleService-Info.plist'
-    ]
-  },
-  ANDROID: {
-    dest: [
-      ANDROID_DIR + '/google-services.json',
-      ANDROID_DIR + '/app/google-services.json'
-    ],
-    src: [
-      'google-services.json',
-      ANDROID_DIR + '/assets/www/google-services.json',
-      'www/google-services.json',
-      ANDROID_DIR + '/app/src/main/google-services.json'
-    ],
-  }
-};
+var PLATFORM = {};
 
 module.exports = function (context) {
   //get platform from the context supplied by cordova
